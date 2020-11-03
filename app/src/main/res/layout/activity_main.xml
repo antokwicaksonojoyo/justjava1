@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@drawable/kerisw">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wicaksono Gallery"
+            android:layout_margin="10dp"
+            android:textSize="30dp"
+            android:textColor="#8f5e0e"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jasa Booking Servis Pusaka"
+            android:textSize="20dp"
+            android:textColor="#8f5e0e"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_field"
+            android:hint="Input Nama Anda"
+            android:inputType="textCapWords"
+            android:textSize="23sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"  />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/alamat_field"
+            android:hint="Input Alamat Anda"
+            android:inputType="textCapWords"
+            android:textSize="23sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"  />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hp_field"
+            android:hint="Input No. HP"
+            android:inputType="textCapWords"
+            android:textSize="23sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"  />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Aksesoris"
+            android:textSize="25sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:textColor="#8f5e0e"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warangka (250K)"
+            android:textSize="25sp"
+            android:paddingTop="16sp"
+            android:paddingLeft="16sp"
+            android:id="@+id/warangka_checkbox" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minyak Cendana (75K)"
+            android:textSize="25sp"
+            android:paddingTop="16sp"
+            android:paddingLeft="16sp"
+            android:id="@+id/minyak_cendana_checkbox" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singep (15K)"
+            android:textSize="25sp"
+            android:paddingTop="16sp"
+            android:paddingLeft="16sp"
+            android:id="@+id/singep_checkbox" />
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah (Rp. 50000/Bilah)"
+            android:textSize="25sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:textColor="#8f5e0e"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="25sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:onClick="increment"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingLeft="16dp"
+                android:paddingBottom="16dp"
+                android:text="0"
+                android:textSize="30sp"
+                android:id="@+id/quantity_text_view"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="25sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:onClick="decrement"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Order"
+            android:textSize="25sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:textColor="#8f5e0e"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 0"
+            android:textSize="25sp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:id="@+id/price_text_view"/>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            android:orientation="horizontal" >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORDER"
+                android:textSize="25sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:onClick="submitOrder"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textSize="25sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:onClick="submitReset"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
